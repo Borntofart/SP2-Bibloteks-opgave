@@ -16,25 +16,29 @@ public class LibraryRoyaltyCalculator {
             System.out.println(olgaRavn.getName() + ": " + olgaRavn.calculateRoyalties() + "kr");
 
             //Test 2 Forfatter med blandede litteraturtyper
-            // Tester at convertLiteratureType() håndterer BI, LYRIK og FAG korrekt
+            // Tester BI, LYRIK og FAG korrekt
 
             Author kariDietz = new Author("Kari Dietz");
-            // Billedbog: 48 sider, BI (3.0), 220 eksemplarer
             kariDietz.addTitle(new PrintedBook("Lille Frø finder hjem", "BI", 220, 48));
-            // Lyriksamling: 96 sider, LYRIK (6.0), 85 eksemplarer
             kariDietz.addTitle(new PrintedBook("Saltmarsken taler", "LYRIK", 85, 96));
-            // Fagbog som lydbog: 410 min, FAG (1.0), 310 eksemplarer
             kariDietz.addTitle(new AudioBook("Havets dyreliv (lydbog)", "FAG", 310, 410));
             System.out.println(kariDietz.getName() + ": " + kariDietz.calculateRoyalties() + "kr");
 
-            //Test 3 Forfatter med kun lydbøger
-            // Sikrer at AudioBook-beregningen virker isoleret
+            //Forfatter med kun lydbøger
             Author mikkelBang = new Author("Mikkel Bang");
             // Krimi som lydbog: 560 min, SKØN (1.7), 430 eksemplarer
             mikkelBang.addTitle(new AudioBook("Mørket ved kysten (lydbog)", "SKØN", 430, 560));
             // Tegneserie som lydbog: 95 min, TE (3.0), 180 eksemplarer
             mikkelBang.addTitle(new AudioBook("Agent X fortæller (lydbog)", "TE", 180, 95));
             System.out.println(mikkelBang.getName() + ": " + mikkelBang.calculateRoyalties() + "kr");
+
+           //cehfen
+
+            Author lucasBeltner = new Author("Lucas Beltner");
+            lucasBeltner.addTitle(new PrintedBook("Min første bog", "SKØN", 50, 118));
+            System.out.println(lucasBeltner.getName() + ": " + lucasBeltner.calculateRoyalties() + "kr");
+
+
         }
     }
 

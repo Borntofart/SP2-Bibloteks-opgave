@@ -9,9 +9,15 @@ public class Author {
         this.titles = new ArrayList<>();
     }
 
+
+
+
     public void addTitle(Title title) {
         titles.add(title);
     }
+
+
+
 
     public double calculateRoyalties() {
         double total = 0;
@@ -22,7 +28,12 @@ public class Author {
         return Math.round(total * 100.0) / 100.0;
     }
 
+
+
     public String getName() {
         return name;
     }
+
+
+
 }
